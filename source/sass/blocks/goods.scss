@@ -1,0 +1,141 @@
+.goods__list {
+  @include clear-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 64px;
+
+  @media (max-width: $tablet-max-width) {
+    justify-content: space-between;
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    gap: 21px;
+  }
+}
+
+.goods__item {
+  margin-bottom: 2px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 130px;
+  }
+}
+
+.goods__item img {
+  @media (max-width: $desktop-container-width) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.goods__item h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $light-black;
+  margin-top: 14px;
+  margin-bottom: 3px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 9px;
+    margin-bottom: 2px;
+  }
+}
+
+.goods__item span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: $light-black;
+}
+
+.goods__pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 35px 0 0 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    justify-content: center;
+    padding: 8px 15px 0 15px;
+  }
+}
+
+.goods__pagination ul {
+  @include clear-list;
+  display: flex;
+  margin-left: -32px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
+}
+
+.goods__pagination li {
+  margin-right: 13px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 23px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.goods__pagination a {
+  color: $gray;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.goods__active a {
+  color: $light-black;
+}
+
+.goods__pagination button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-family: $font;
+  color: $light-black;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

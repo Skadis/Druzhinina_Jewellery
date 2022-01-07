@@ -1,0 +1,176 @@
+.login {
+  position: relative;
+  width: 430px;
+  margin: auto;
+  margin-top: 20px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 270px;
+  }
+}
+
+.login__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background-color: $black;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    top: 20px;
+    right: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 13px;
+    right: 15px;
+  }
+}
+
+.login__close svg {
+  color: $light-black;
+  z-index: 11;
+
+  @media (max-width: $tablet-max-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.login__wrapper {
+  background-color: $light-brown;
+  background-image: url("../img/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 160px 45px 54px 46px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 49px 51px 54px 51px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 80px 15px 41px 15px;
+  }
+}
+
+.login h2 {
+  margin-bottom: 28px;
+  font-family: $font-title;
+  text-align: center;
+  color: $light-black;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.login input {
+  width: 100%;
+  margin-bottom: 33px;
+  padding-bottom: 9px;
+  background: transparent;
+  color: $light-black;
+  border: none;
+  border-bottom: 1px solid $light-black;
+  font-family: $font;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 27px;
+  }
+}
+
+.login input[type="password"] {
+  margin-bottom: 5px;
+}
+
+.login__password-recovery {
+  display: block;
+  margin-bottom: 45px;
+  text-align: right;
+  color: $gray;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.login__submit {
+  display: block;
+  width: 340px;
+  padding: 24px;
+  border: none;
+  font-family: $font;
+  background-color: $brown;
+  color: $white;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 11px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 240px;
+    margin: 0 auto 10px auto;
+  }
+}
+
+.login span {
+  display: inline-block;
+  margin-left: 53px;
+  margin-right: 5px;
+  vertical-align: baseline;
+  color: $gray;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
+}
+
+.login__signup {
+  display: inline-block;
+  vertical-align: baseline;
+  color: $light-black;
+
+  &:hover,
+  &:focus {
+    color: $gray;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

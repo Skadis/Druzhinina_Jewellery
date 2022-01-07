@@ -1,0 +1,55 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 100;
+  display: none;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal--clear {
+  display: block;
+  position: static;
+}
+
+.modal--open .modal__close-button {
+  position: absolute;
+  top: 19px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.modal--open .modal__close-button::before,
+.modal--open .modal__close-button::after {
+  content: "";
+  width: 26px;
+  height: 3px;
+  position: absolute;
+  top: 10px;
+  left: -4px;
+  background-color: $black;
+}
+
+.modal--open .modal__close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal--open .modal__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal__login {
+  position: relative;
+}

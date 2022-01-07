@@ -1,0 +1,43 @@
+.user-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.user-list__item:not(:last-of-type) {
+  margin-right: 37px;
+}
+
+.user-list__item a {
+  color: $light-black;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.user-list__item--cart svg {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    fill: none;
+    margin-top: 14px;
+    margin-right: 22px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 4px;
+  }
+}
+
+.user-list__item--login,
+.user-list__item--cart span {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
