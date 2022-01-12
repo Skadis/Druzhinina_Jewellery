@@ -14,7 +14,13 @@
   }
 }
 
-.slider-catalog__title {
+.slider-catalog h2 {
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
 
@@ -115,6 +121,7 @@
 
 .slider-catalog__pagination span {
   margin-right: 15px;
+  background: none;
 
   @media (max-width: $tablet-max-width) {
     margin-right: 29px;

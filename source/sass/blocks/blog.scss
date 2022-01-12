@@ -14,7 +14,13 @@
   text-align: center;
 }
 
-.blog__title {
+.blog h2 {
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin-bottom: 17px;
 }
 

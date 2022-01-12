@@ -11,6 +11,15 @@
   }
 }
 
+.faq h2 {
+  font-family: $font-title;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 .faq__list {
   @include clear-list;
   margin-top: 48px;

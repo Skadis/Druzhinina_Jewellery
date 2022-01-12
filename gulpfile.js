@@ -93,7 +93,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("vendor", function() {
-  return gulp.src('source/js/lib/*.js')
+  return gulp.src(['node_modules/swiper/swiper-bundle.js', 'node_modules/focus-manager/focusManager.js'])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('build/js'));
 });
