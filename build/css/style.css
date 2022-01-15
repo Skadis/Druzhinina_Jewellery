@@ -460,6 +460,9 @@ img {
       padding-left: 10px;
       padding-right: 10px; } }
 
+.page-header {
+  min-height: 92px; }
+
 .page-header__top {
   padding-top: 30px;
   padding-bottom: 11px;
@@ -892,8 +895,7 @@ img {
 .page-main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  overflow: hidden; }
+          flex: 1 0 auto; }
 
 .user-list {
   font-weight: 500;
@@ -1181,25 +1183,38 @@ img {
   font-size: 14px;
   line-height: 18px; }
 
-.slider-catalog img {
+.slider-catalog__list--no-js {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.slider-catalog__list img {
   max-width: 270px;
   max-height: 284px;
   margin-bottom: 10px; }
   @media (max-width: 1365px) {
-    .slider-catalog img {
+    .slider-catalog__list img {
       width: 90%;
       height: 90%; } }
   @media (max-width: 1023px) {
-    .slider-catalog img {
+    .slider-catalog__list img {
       max-width: 100%;
       max-height: 100%;
       width: 324px;
       height: 340px; } }
   @media (max-width: 767px) {
-    .slider-catalog img {
+    .slider-catalog__list img {
       width: 98.5%;
       height: auto;
       margin-bottom: 3px; } }
+
+@media (max-width: 767px) {
+  .slider-catalog__list--no-js img {
+    max-width: none;
+    max-height: none;
+    width: 324px;
+    height: 340px; } }
 
 .slider-catalog h3 {
   font-style: normal;
@@ -1529,7 +1544,7 @@ img {
       padding-right: 5px;
       padding-left: 5px; } }
 
-.faq__list--nojs .faq__button {
+.faq__list--no-js .faq__button {
   display: none; }
 
 .faq__item {
@@ -1744,6 +1759,8 @@ img {
       height: 240px; } }
   @media (max-width: 767px) {
     .gallery__item--3 img {
+      width: 133px;
+      height: 247px;
       -o-object-fit: cover;
          object-fit: cover; } }
 
@@ -1976,7 +1993,8 @@ img {
 .filter__reset,
 .filter__apply {
   width: 100%;
-  height: 68px;
+  padding-top: 25px;
+  padding-bottom: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
@@ -1995,12 +2013,12 @@ img {
   @media (max-width: 1023px) {
     .filter__reset,
     .filter__apply {
-      width: 85.4%;
+      width: 85%;
       margin-left: 21px; } }
   @media (max-width: 767px) {
     .filter__reset,
     .filter__apply {
-      width: 84.2%;
+      width: 84%;
       margin: 0 auto 20px auto; } }
 
 .filter__apply {

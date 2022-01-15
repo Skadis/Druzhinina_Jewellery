@@ -131,6 +131,8 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    width: 133px;
+    height: 247px;
     object-fit: cover;
   }
 }

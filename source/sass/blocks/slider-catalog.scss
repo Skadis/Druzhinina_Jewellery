@@ -82,7 +82,11 @@
   line-height: 18px;
 }
 
-.slider-catalog img {
+.slider-catalog__list--no-js {
+  flex-direction: column;
+}
+
+.slider-catalog__list img {
   max-width: 270px;
   max-height: 284px;
   margin-bottom: 10px;
@@ -103,6 +107,15 @@
     width: 98.5%;
     height: auto;
     margin-bottom: 3px;
+  }
+}
+
+.slider-catalog__list--no-js img {
+  @media (max-width: $mobile-max-width) {
+    max-width: none;
+    max-height: none;
+    width: 324px;
+    height: 340px;
   }
 }
 

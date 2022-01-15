@@ -2,6 +2,8 @@
 
 (function () {
 
+  /* global focusManager, Swiper */
+
   const header = document.querySelector('.page-header');
   const menuButton = header.querySelector('.page-header__toggle');
   const body = document.querySelector('.page-body');
@@ -10,7 +12,7 @@
   const modalOverlay = document.querySelector('.modal__overlay');
   const modalForm = document.querySelector('.modal__login');
   const pageBody = document.querySelector('body');
-  const focusManagerLib = focusManager; // eslint-disable-line
+  const focusManagerLib = focusManager;
   const storage = window.localStorage;
 
   const openModal = function (item, evt) {
@@ -117,8 +119,59 @@
   if (window.location.toString().includes('main.html')) {
     const faqButtons = document.querySelectorAll('.faq__item');
     const faqList = document.querySelector('.faq__list');
+    const sliderList = document.querySelector('.slider-catalog__list');
 
-    faqList.classList.remove('faq__list--nojs');
+    let swiper = new Swiper('.slider-catalog__slider', {
+      simulateTouch: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+          pagination: {
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass, index, total) {
+              return '<span class="' + currentClass + '">0 ' + index + ' </span>' +
+                  ' of ' +
+                  '<span class="' + totalClass + '">0 ' + total + ' </span>';
+            },
+          }
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+          pagination: {
+            type: 'bullets',
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          }
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
+          pagination: {
+            type: 'bullets',
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          }
+        }
+      }
+    });
+
+    faqList.classList.remove('faq__list--no-js');
+    sliderList.classList.remove('slider-catalog__list--no-js');
 
     faqButtons.forEach((item) => {
       item.classList.add('closed');
@@ -141,6 +194,8 @@
         }
       });
     });
+
+    swiper();
   }
 
   if (window.location.toString().includes('catalog.html')) {
@@ -176,53 +231,4 @@
     });
   }
 
-  // eslint-disable-next-line
-  let swiper = new Swiper('.slider-catalog__slider', {
-    simulateTouch: false,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 30,
-        pagination: {
-          type: 'fraction',
-          renderFraction: function (currentClass, totalClass, index, total) {
-            return '<span class="' + currentClass + '">0 ' + index + ' </span>' +
-                ' of ' +
-                '<span class="' + totalClass + '">0 ' + total + ' </span>';
-          },
-        }
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 30,
-        pagination: {
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        }
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 30,
-        pagination: {
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        }
-      }
-    }
-  });
 })();

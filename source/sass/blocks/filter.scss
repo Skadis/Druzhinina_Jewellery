@@ -189,7 +189,8 @@
 .filter__reset,
 .filter__apply {
   width: 100%;
-  height: 68px;
+  padding-top: 25px;
+  padding-bottom: 22px;
   box-sizing: border-box;
   text-align: center;
   font-family: $font;
@@ -207,12 +208,12 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    width: 85.4%;
+    width: 85%;
     margin-left: 21px;
   }
 
   @media (max-width: $mobile-max-width) {
-    width: 84.2%;
+    width: 84%;
     margin: 0 auto 20px auto;
   }
 }

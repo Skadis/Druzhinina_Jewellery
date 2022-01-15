@@ -8,3 +8,7 @@ extends:
 
 parserOptions:
   "ecmaVersion": 2018
+
+globals:
+  var1: focusManager
+  var2: swiper
