@@ -2294,6 +2294,9 @@ img {
   background: #ffffff;
   margin-top: 25px;
   padding-bottom: 15px; }
+  @media (max-width: 1023px) {
+    .filter--modal {
+      margin: 25px auto 50px auto; } }
   @media (max-width: 767px) {
     .filter--modal {
       padding-bottom: 8px; } }
@@ -2489,7 +2492,7 @@ img {
       padding: 49px 51px 54px 51px; } }
   @media (max-width: 767px) {
     .login__wrapper {
-      padding: 80px 15px 41px 15px; } }
+      padding: 101px 15px 41px 15px; } }
 
 .login h2 {
   margin-bottom: 28px;
@@ -2501,7 +2504,9 @@ img {
   line-height: 44px; }
   @media (max-width: 767px) {
     .login h2 {
-      margin-bottom: 25px; } }
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 31px; } }
 
 .login input {
   width: 100%;
@@ -2529,6 +2534,9 @@ img {
 
 .login input[type="password"] {
   margin-bottom: 5px; }
+  @media (max-width: 767px) {
+    .login input[type="password"] {
+      margin-bottom: 0; } }
 
 .login__password-recovery {
   display: inline;
@@ -2561,7 +2569,7 @@ img {
   @media (max-width: 767px) {
     .login__submit {
       width: 240px;
-      margin: 0 auto 10px auto; } }
+      margin: 31px auto 10px auto; } }
 
 .login__text-bottom {
   text-align: start; }
@@ -2614,6 +2622,11 @@ img {
   background-color: transparent; }
   .modal--open .modal__close-button:focus {
     opacity: 0.5; }
+  @media (max-width: 767px) {
+    .modal--open .modal__close-button {
+      right: 11px;
+      top: 11px;
+      width: 19px; } }
 
 .modal--open .modal__close-button::before,
 .modal--open .modal__close-button::after {
@@ -2624,6 +2637,14 @@ img {
   top: 10px;
   left: -4px;
   background-color: #000000; }
+  @media (max-width: 767px) {
+    .modal--open .modal__close-button::before,
+    .modal--open .modal__close-button::after {
+      width: 16px;
+      height: 2px;
+      top: 11px;
+      right: 0;
+      left: 0; } }
 
 .modal--open .modal__close-button::before {
   -webkit-transform: rotate(45deg);
@@ -2635,7 +2656,8 @@ img {
 
 .modal__overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute; }
+  position: absolute;
+  overflow: scroll; }
 
 .modal__login {
   position: relative; }

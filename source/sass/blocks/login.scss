@@ -63,7 +63,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 80px 15px 41px 15px;
+    padding: 101px 15px 41px 15px;
   }
 }
 
@@ -78,6 +78,8 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 31px;
   }
 }
 
@@ -103,6 +105,10 @@
 
 .login input[type="password"] {
   margin-bottom: 5px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 0;
+  }
 }
 
 .login__password-recovery {
@@ -143,7 +149,7 @@
 
   @media (max-width: $mobile-max-width) {
     width: 240px;
-    margin: 0 auto 10px auto;
+    margin: 31px auto 10px auto;
   }
 }
 

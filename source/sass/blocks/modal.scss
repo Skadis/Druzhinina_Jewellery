@@ -29,6 +29,12 @@
   &:focus {
     opacity: 0.5;
   }
+
+  @media (max-width: $mobile-max-width) {
+    right: 11px;
+    top: 11px;
+    width: 19px;
+  }
 }
 
 .modal--open .modal__close-button::before,
@@ -40,6 +46,14 @@
   top: 10px;
   left: -4px;
   background-color: $black;
+
+  @media (max-width: $mobile-max-width) {
+    width: 16px;
+    height: 2px;
+    top: 11px;
+    right: 0;
+    left: 0;
+  }
 }
 
 .modal--open .modal__close-button::before {
@@ -54,6 +68,7 @@
 .modal__overlay {
   background-color: rgba($black, 0.5);
   position: absolute;
+  overflow: scroll;
 }
 
 .modal__login {
