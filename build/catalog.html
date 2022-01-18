@@ -103,7 +103,7 @@
     </div>
 
     <div class="container catalog">
-      <section class="catalog__filter filter">
+      <section class="catalog__filter filter filter--desk">
         <h2 class="visually-hidden">Filter</h2>
         <button type="button" class="filter__close-button" aria-label="Close filter"></button>
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="POST">
@@ -381,7 +381,7 @@
         <div class="page-footer__input-wrapper">
           <label class="visually-hidden">Search</label>
           <input type="email" placeholder="Your E-mail">
-          <button type="button">
+          <button type="submit">
             Sign Up
             <svg class="page-footer__icon-arrow" width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
@@ -458,7 +458,7 @@
     </div>
   </footer>
 
-  <section class="modal">
+  <section class="modal modal--login">
     <div class="modal__overlay">
       <h2 class="visually-hidden">Login</h2>
       <form class="modal__login login" action="https://echo.htmlacademy.ru/" method="post">
@@ -471,12 +471,111 @@
           <input class="modal__password" type="password" name="password" id="password" placeholder="Password" minlength="8" required="">
           <a class="login__password-recovery" href="#">Forgot your password?</a>
           <button class="login__submit" type="submit">Log In</button>
-          <span>Don’t have an account?</span>
-          <a class="login__signup" href="#">Sign up</a>
+          <div class="login__text-bottom">
+            <span>Don’t have an account?</span>
+            <a class="login__signup" href="#">Sign up</a>
+          </div>
         </div>
       </form>
     </div>
   </section>
+
+  <section class="modal modal--filter">
+    <div class="modal__overlay">
+      <section class="catalog__filter filter filter--modal">
+        <h2 class="visually-hidden">Filter</h2>
+        <button type="button" class="filter__close-button" aria-label="Close filter"></button>
+        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="POST">
+          <div class="filter__fieldset-wrapper">
+            <fieldset class="filter__field">
+              <button class="filter__header" type="button">
+                Product
+                <svg width="15" height="8">
+                  <use xlink:href="img/sprite.svg#icon-toggle"></use>
+                </svg>
+              </button>
+              <label class="filter__item">
+                <input type="checkbox" name="Necklaces">
+                <span>Necklaces</span>
+              </label>
+              <label class="filter__item">
+                <input type="checkbox" name="Chokers">
+                <span>Chokers</span>
+              </label>
+              <label class="filter__item">
+                <input type="checkbox" name="Rings">
+                <span>Rings</span>
+              </label>
+              <label class="filter__item">
+                <input type="checkbox" name="Earrings">
+                <span>Earrings</span>
+              </label>
+            </fieldset>
+            <fieldset class="filter__field">
+              <button class="filter__header" type="button">
+                Material
+                <svg width="15" height="8">
+                  <use xlink:href="img/sprite.svg#icon-toggle"></use>
+                </svg>
+              </button>
+              <label class="filter__item">
+                <input type="checkbox" name="Gold">
+                <span>Gold</span>
+              </label>
+              <label class="filter__item">
+                <input type="checkbox" name="Silver">
+                <span>Silver</span>
+              </label>
+            </fieldset>
+            <fieldset class="filter__field">
+              <button class="filter__header" type="button">
+                Collection
+                <svg width="15" height="8">
+                  <use xlink:href="img/sprite.svg#icon-toggle"></use>
+                </svg>
+              </button>
+              <label class="filter__item">
+                <input type="checkbox" name="Pink Flamingo">
+                <span>Pink Flamingo</span>
+              </label>
+              <label class="filter__item">
+                <input type="checkbox" name="Dreams">
+                <span>Dreams</span>
+              </label>
+            </fieldset>
+            <fieldset class="filter__field filter__field--price">
+              <button class="filter__header" type="button">
+                Price
+                <svg width="15" height="8">
+                  <use xlink:href="img/sprite.svg#icon-toggle"></use>
+                </svg>
+              </button>
+              <div class="filter__range">
+                <div class="filter__controls">
+                  <div class="filter__scale">
+                    <div class="filter__bar"></div>
+                  </div>
+                  <div class="filter__toggle-min"></div>
+                  <div class="filter__toggle-max"></div>
+                </div>
+                <div class="filter__price">
+                  <label class="filter__min-price">$
+                  <input type="number" name="min-price" value="55">
+                  </label>
+                  <label class="filter__max-price">$
+                  <input type="number" name="max-price" value="155">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="filter__apply" type="submit">Apply</button>
+          <button class="filter__reset" type="reset">Clear All</button>
+        </form>
+      </section>
+    </div>
+  </section>
+
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

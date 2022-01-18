@@ -12,20 +12,30 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    gap: 21px;
+    gap: 25px;
   }
 }
 
 .goods__item {
   margin-bottom: 2px;
+  max-width: 270px;
 
   &:hover,
   &:focus {
     opacity: 0.7;
   }
 
+  @media (max-width: $desktop-container-width) {
+    max-width: 210px;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    width: 26.63vw;
+    max-width: none;
+  }
+
   @media (max-width: $mobile-max-width) {
-    max-width: 130px;
+    width: 40.63vw;
   }
 }
 
@@ -36,8 +46,8 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    width: 130px;
-    height: 136px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -50,7 +60,7 @@
   margin-bottom: 3px;
 
   @media (max-width: $mobile-max-width) {
-    margin-top: 9px;
+    margin-top: 10px;
     margin-bottom: 2px;
   }
 }

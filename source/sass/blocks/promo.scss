@@ -5,6 +5,7 @@
   background: url("../img/promo-bg-desktop.jpg");
   background-size: cover;
   background-color: $brown;
+  background-position: center;
   background-repeat: no-repeat;
   min-height: 463px;
 
@@ -37,6 +38,7 @@
   background-size: cover;
   background-color: $brown;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 261px;
 
   @media (min-resolution: 2dppx) {

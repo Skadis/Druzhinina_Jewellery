@@ -50,6 +50,12 @@
   transform: rotate(-45deg);
 }
 
+
+.modal__overlay {
+  background-color: rgba($black, 0.5);
+  position: absolute;
+}
+
 .modal__login {
   position: relative;
 }

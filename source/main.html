@@ -25,6 +25,7 @@
             <use xlink:href="img/sprite.svg#menu"></use>
           </svg>
         </button>
+
         <form class="page-header__search page-header__search--desktop" action="https://echo.htmlacademy.ru/" method="post">
           <svg width="14" height="14">
             <use xlink:href="img/sprite.svg#search-icon"></use>
@@ -122,7 +123,7 @@
           <div class="slider-catalog__slider swiper">
             <ul class="slider-catalog__list slider-catalog__list--no-js swiper-wrapper">
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="0">
                   <picture>
                     <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
 
@@ -134,7 +135,7 @@
                 </a>
               </li>
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="1">
                   <picture>
                     <source type="image/webp" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
 
@@ -146,7 +147,7 @@
                 </a>
               </li>
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="2">
                   <picture>
                     <source type="image/webp" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
 
@@ -157,8 +158,8 @@
                   <span>$ 215</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="3">
+                <a href="#" data-slide-index="3">
                   <picture>
                     <source type="image/webp" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
 
@@ -169,8 +170,8 @@
                   <span>$ 95</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="4">
+                <a href="#" data-slide-index="4">
                   <picture>
                     <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
 
@@ -181,8 +182,8 @@
                   <span>$ 145</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="5">
+                <a href="#" data-slide-index="5">
                   <picture>
                     <source type="image/webp" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
 
@@ -193,8 +194,8 @@
                   <span>$ 115</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="6">
+                <a href="#" data-slide-index="6">
                   <picture>
                     <source type="image/webp" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
 
@@ -205,8 +206,8 @@
                   <span>$ 215</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="7">
+                <a href="#" data-slide-index="7">
                   <picture>
                     <source type="image/webp" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
 
@@ -217,8 +218,8 @@
                   <span>$ 95</span>
                 </a>
               </li>
-              <li class="swiper-slide">
-                <a href="#">
+              <li class="swiper-slide" data-slide-index="8">
+                <a href="#" data-slide-index="8">
                   <picture>
                     <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
 
@@ -230,7 +231,7 @@
                 </a>
               </li>
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="9">
                   <picture>
                     <source type="image/webp" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
 
@@ -242,7 +243,7 @@
                 </a>
               </li>
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="10">
                   <picture>
                     <source type="image/webp" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
 
@@ -254,7 +255,7 @@
                 </a>
               </li>
               <li class="swiper-slide">
-                <a href="#">
+                <a href="#" data-slide-index="11">
                   <picture>
                     <source type="image/webp" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
 
@@ -450,13 +451,13 @@
 
   <footer class="page-footer">
     <div class="container page-footer__wrapper">
-      <form class="page-footer__signup" action="https://echo.htmlacademy.ru/" method="POST">
+      <form class="page-footer__signup" action="https://echo.htmlacademy.ru/" method="post">
         <h3>The good stuff in&nbsp;your inbox</h3>
         <span>News and updates from CH. No&nbsp;spam, we promise.</span>
         <div class="page-footer__input-wrapper">
-          <label class="visually-hidden">Search</label>
-          <input type="email" placeholder="Your E-mail">
-          <button type="button">
+          <label class="visually-hidden" for="sign-up">Sign Up</label>
+          <input type="email" placeholder="Your E-mail" id="sign-up" name="sign up email" title="Sign Up">
+          <button type="submit">
             Sign Up
             <svg class="page-footer__icon-arrow" width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow"></use>
@@ -533,7 +534,7 @@
     </div>
   </footer>
 
-  <section class="modal">
+  <section class="modal modal--login">
     <div class="modal__overlay">
       <h2 class="visually-hidden">Login</h2>
       <form class="modal__login login" action="https://echo.htmlacademy.ru/" method="post">
@@ -546,13 +547,15 @@
           <input class="modal__password" type="password" name="password" id="password" placeholder="Password" minlength="8" required>
           <a class="login__password-recovery" href="#">Forgot your password?</a>
           <button class="login__submit" type="submit">Log In</button>
-          <span>Don’t have an account?</span>
-          <a class="login__signup" href="#">Sign up</a>
+          <div class="login__text-bottom">
+            <span>Don’t have an account?</span>
+            <a class="login__signup" href="#">Sign up</a>
+          </div>
         </div>
       </form>
     </div>
   </section>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

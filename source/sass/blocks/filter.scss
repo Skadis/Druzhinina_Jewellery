@@ -5,11 +5,11 @@
   position: relative;
 
   @media (max-width: $tablet-max-width) {
-    width: 62.5%;
+    width: 55.1%;
   }
 
   @media (max-width: $mobile-max-width) {
-    width: 94%;
+    width: 85%;
     margin: auto;
   }
 }
@@ -111,12 +111,16 @@
   }
 }
 
+.filter__field--price {
+  padding-bottom: 3px;
+}
+
 .filter__field--closed {
   padding: 24px 25px 0 25px;
   margin-bottom: -1px;
 
   @media (max-width: $tablet-max-width) {
-    padding: 37px 39px 11px 22px;
+    padding: 37px 39px 8px 22px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -228,11 +232,12 @@
 .filter__fieldset-wrapper {
   border: 1px solid $brown;
   border-bottom: none;
-  margin-bottom: 39px;
+  margin-bottom: 33px;
 
   @media (max-width: $tablet-max-width) {
     border: none;
     box-shadow: 0 5px 32px $shadow;
+    margin-bottom: 40px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -255,23 +260,24 @@
 .filter__price {
   display: flex;
   justify-content: space-between;
-  width: 144px;
-  margin-top: 20px;
+  width: 160px;
+  margin-top: 21px;
   margin-bottom: 2px;
   position: relative;
-  left: 37px;
+  left: 21px;
 
   @media (max-width: $tablet-max-width) {
-    width: 214px;
+    width: 235px;
     margin-top: 23px;
     margin-bottom: 12px;
-    left: 46px;
+    left: 26px;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-top: 20px;
-    width: 176px;
-    left: 21px;
+    width: 194px;
+    left: 3px;
+    margin-bottom: 3px;
   }
 }
 
@@ -313,7 +319,7 @@
     left: 10px;
   }
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $mobile-max-width) {
     width: 230px;
     left: 0;
   }
@@ -327,10 +333,10 @@
   left: 59px;
 
   @media (max-width: $tablet-max-width) {
-    width: 170px;
+    width: 178px;
   }
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $mobile-max-width) {
     width: 120px;
     left: 47px;
   }
@@ -380,7 +386,7 @@
   position: relative;
 
   @media (max-width: $tablet-max-width) {
-    margin-top: 26px;
+    margin-top: 23px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -399,8 +405,9 @@
     background-color: $light-black;
     border-radius: 50%;
     position: absolute;
-    top: -15px;
+    top: -14px;
     right: -15px;
+    z-index: 100;
 
     &::before,
     &::after {
@@ -431,5 +438,21 @@
   @media (max-width: $mobile-max-width) {
     top: -20px;
     right: -8px;
+  }
+}
+
+.filter--modal {
+  background: $white;
+  margin-top: 25px;
+  padding-bottom: 15px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 8px;
+  }
+}
+
+.filter--desk {
+  @media (max-width: $tablet-max-width) {
+    display: none;
   }
 }

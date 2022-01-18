@@ -1,5 +1,5 @@
 .blog {
-  padding-bottom: 91px;
+  padding-bottom: 87px;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 41px;
@@ -58,7 +58,8 @@
 .blog__list {
   @include clear-list;
   display: grid;
-  gap: 29px;
+  row-gap: 25px;
+  column-gap: 37px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content;
   margin-top: 63px;
@@ -67,12 +68,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    row-gap: 47px;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-top: 54px;
-    gap: 40px;
+    row-gap: 40px;
   }
 }
 
@@ -86,19 +87,18 @@
 }
 
 .blog__item picture {
-  max-height: 300px;
-}
+  @media (max-width: $tablet-max-width) {
+    height: 303px;
+  }
 
-.blog__item--third picture {
-  max-height: 630px;
-
-  @media (max-width: $desktop-container-width) {
-    max-height: 300px;
+  @media (max-width: $mobile-max-width) {
+    height: auto;
   }
 }
 
 .blog__img {
   width: 285px;
+  height: 100%;
   object-fit: cover;
 
   @media (max-width: $tablet-max-width) {

@@ -138,11 +138,13 @@
 
   @media (max-width: $tablet-max-width) {
     margin-right: 29px;
+    padding-right: 13px;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-right: 5px;
     margin-left: 5px;
+    padding-right: 3px;
   }
 
   &:last-child {
@@ -235,5 +237,9 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 5px;
   }
 }

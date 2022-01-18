@@ -122,7 +122,10 @@
     const sliderList = document.querySelector('.slider-catalog__list');
 
     let swiper = new Swiper('.slider-catalog__slider', {
+      init: false,
       simulateTouch: false,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -170,6 +173,19 @@
       }
     });
 
+    swiper.init();
+
+    swiper.$el.on('keydown', (e) => {
+
+      const slideIndex = e.target.dataset.slideIndex;
+
+      if (!slideIndex) {
+        return;
+      }
+
+      swiper.slideTo(slideIndex);
+    });
+
     faqList.classList.remove('faq__list--no-js');
     sliderList.classList.remove('slider-catalog__list--no-js');
 
@@ -194,29 +210,63 @@
         }
       });
     });
-
-    swiper();
   }
 
   if (window.location.toString().includes('catalog.html')) {
-    const filter = document.querySelector('.filter');
     const filterButtons = document.querySelectorAll('.filter__field');
     const filterOpenButton = document.querySelector('.catalog__filter-button');
-    const filterCloseButton = document.querySelector('.filter__close-button');
+    const filterModal = document.querySelector('.modal--filter');
+    const filterModalOverlay = filterModal.querySelector('.modal__overlay');
 
-    filterOpenButton.addEventListener('click', () => {
-      if (filter.classList.contains('filter--close')) {
-        filter.classList.remove('filter--close');
-      }
-      filter.classList.add('filter--open');
-    });
+    const openModalFilter = function (item, evt) {
+      evt.preventDefault();
+      if (item) {
+        item.classList.add('modal--open');
+        filterModalOverlay.classList.add('lock');
+        pageBody.classList.add('lock');
+        focusManagerLib.capture(filterModal);
+        const modalCloseButton = item.querySelector('.filter__close-button');
 
-    filterCloseButton.addEventListener('click', () => {
-      if (filter.classList.contains('filter--open')) {
-        filter.classList.remove('filter--open');
+        modalCloseButton.addEventListener('click', onCloseButtonPressFilter);
+        filterModalOverlay.addEventListener('click', onOverlayClickFilter);
+        window.addEventListener('keydown', onEscKeyPressFilter);
       }
-      filter.classList.add('filter--close');
-    });
+    };
+
+    const closeModalFilter = function () {
+      filterModal.classList.remove('modal--open');
+      pageBody.classList.remove('lock');
+      const modalCloseButton = document.querySelector('.filter__close-button');
+      modalCloseButton.removeEventListener('click', onCloseButtonPressFilter);
+      filterModalOverlay.removeEventListener('click', onOverlayClickFilter);
+      focusManagerLib.release(filterModal);
+      window.removeEventListener('keydown', onEscKeyPressFilter);
+    };
+
+    const onModalOpenFilter = function (evt) {
+      openModalFilter(filterModal, evt);
+    };
+
+    const onCloseButtonPressFilter = () => {
+      closeModalFilter();
+    };
+
+    const onOverlayClickFilter = function (evt) {
+      if (evt.target.matches('.lock')) {
+        closeModalFilter();
+      }
+    };
+
+    const onEscKeyPressFilter = function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        closeModalFilter();
+      }
+    };
+
+
+    filterOpenButton.addEventListener('click', onModalOpenFilter);
+
 
     filterButtons.forEach((item) => {
       item.classList.add('filter__field--closed');
